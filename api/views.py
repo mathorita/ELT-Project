@@ -4,7 +4,13 @@ from rest_framework.response import Response
 from google.cloud import bigquery
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "hopeful-timing-460610-c6-394d9f1c4714.json"
+import json
+from google.cloud import bigquery
+from google.oauth2 import service_account
+
+credentials_info = json.loads(os.environ["GOOGLE_CREDENTIALS_JSON"])
+credentials = service_account.Credentials.from_service_account_info(credentials_info)
+client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 
 class YearCountView(APIView):
     def get(self, request):
