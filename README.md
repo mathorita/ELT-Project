@@ -57,7 +57,7 @@ Returns a JSON summary of movie counts by release year from BigQuery.
 
 ## 🧪 Local Setup (optional)
 
-git clone https://github.com/your-user/your-repo.git
+git clone https://github.com/mathorita/ELT-Project
 cd your-repo
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
