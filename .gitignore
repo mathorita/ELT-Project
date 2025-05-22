@@ -1,0 +1,2 @@
+*.json
+!env.json  # se quiser manter algum específico no futuro
